@@ -7,7 +7,7 @@ EmotionPilates::Application.routes.draw do |map|
   get "home/index"
 
   # admin routes
-  match 'admin' => 'admin#index'
+  match 'admin', :to => 'admin#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

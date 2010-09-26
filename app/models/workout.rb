@@ -1,7 +1,7 @@
 class Workout < ActiveRecord::Base
 
 	# paperclip settings
-	has_attached_file :mp3_intro, :path => ":rails_root/public/uploads/mp3s/:basename.:extension"
+	has_attached_file :mp3_intro, :path => "#{Rails.root}/public/uploads/mp3s/:basename.:extension"
 
 	# paperclip validation
 	validates_attachment_size :mp3_intro, :less_than => 5.megabytes, :message => "must be smaller than 5Mb"

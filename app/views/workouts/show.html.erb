@@ -8,7 +8,26 @@
   <%= @workout.description %>
 </p>
 
+<% if @workout.mp3_intro %>
+<p>
+  <b>Intro MP3:</b><br />
+  <div id='mp3_player'></div>
+</p>
+
+<br />
+<% end %>
 
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
+
+<! MP3 Longtail players >
+<% if @workout.mp3_intro %>
+  <script type="text/javascript">
+    var so = new SWFObject('../player.swf','player','300','24','9');
+    so.addParam('allowfullscreen','false');
+    so.addParam('wmode','opaque');
+    so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_intro_file_name}" %>');
+    so.write('mp3_player');
+  </script>
+<% end %>
 

@@ -3,7 +3,10 @@
 <head>
   <title>EmotionPilates</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :defaults,
+                             "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
+                             "swfobject",
+                             "application" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
