@@ -1,5 +1,2 @@
-
-jQuery(function(){
-
-});
+//Put the jQuery code here
 

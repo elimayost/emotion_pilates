@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100923140937) do
+ActiveRecord::Schema.define(:version => 20100926192415) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -43,6 +43,18 @@ ActiveRecord::Schema.define(:version => 20100923140937) do
     t.string   "mp3_intro_file_name"
     t.string   "mp3_intro_content_type"
     t.integer  "mp3_intro_file_size"
+    t.string   "mp3_part_one_file_name"
+    t.string   "mp3_part_one_content_type"
+    t.integer  "mp3_part_one_file_size"
+    t.string   "mp3_part_two_file_name"
+    t.string   "mp3_part_two_content_type"
+    t.integer  "mp3_part_two_file_size"
+    t.string   "mp3_part_three_file_name"
+    t.string   "mp3_part_three_content_type"
+    t.integer  "mp3_part_three_file_size"
+    t.string   "mp3_unguided_file_name"
+    t.string   "mp3_unguided_content_type"
+    t.integer  "mp3_unguided_file_size"
   end
 
 end
