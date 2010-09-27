@@ -64,7 +64,7 @@
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
-    so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_intro_file_name}" %>');
+    so.addVariable('file','<%= "#{@workout.mp3_intro.url(:original)}" %>');
     so.addVariable('volume','50');
     so.write('mp3_intro');
   </script>
@@ -75,7 +75,7 @@
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
-    so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_part_one_file_name}" %>');
+    so.addVariable('file','<%= "#{@workout.mp3_part_one.url(:original)}" %>');
     so.addVariable('volume','50');
     so.write('mp3_part_one');
   </script>
@@ -86,7 +86,7 @@
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
-    so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_part_two_file_name}" %>');
+    so.addVariable('file','<%= "#{@workout.mp3_part_two.url(:original)}" %>');
     so.addVariable('volume','50');
     so.write('mp3_part_two');
   </script>
@@ -97,7 +97,7 @@
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
-    so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_part_three_file_name}" %>');
+    so.addVariable('file','<%= "#{@workout.mp3_part_three.url(:original)}" %>');
     so.addVariable('volume','50');
     so.write('mp3_part_three');
   </script>
@@ -108,7 +108,7 @@
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
-    so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_unguided_file_name}" %>');
+    so.addVariable('file','<%= "#{@workout.mp3_unguided.url(:original)}" %>');
     so.addVariable('volume','50');
     so.write('mp3_unguided');
   </script>

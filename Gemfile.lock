@@ -36,6 +36,10 @@ GEM
     activesupport (3.0.0.beta4)
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     builder (2.1.2)
     capybara (0.3.9)
       culerity (>= 0.2.4)
@@ -122,11 +126,13 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    xml-simple (1.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3
   capybara
   cucumber-rails
   devise (= 1.1.rc1)

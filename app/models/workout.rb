@@ -1,11 +1,11 @@
 class Workout < ActiveRecord::Base
 
 	# paperclip settings
-	has_attached_file :mp3_intro, :path => "#{Rails.root}/public/uploads/mp3s/:basename.:extension"
-	has_attached_file :mp3_part_one, :path => "#{Rails.root}/public/uploads/mp3s/:basename.:extension"
-	has_attached_file :mp3_part_two, :path => "#{Rails.root}/public/uploads/mp3s/:basename.:extension"
-	has_attached_file :mp3_part_three, :path => "#{Rails.root}/public/uploads/mp3s/:basename.:extension"
-  has_attached_file :mp3_unguided, :path => "#{Rails.root}/public/uploads/mp3s/:basename.:extension"
+	has_attached_file :mp3_intro, :storage => :s3, :s3_credentials => "#{Rails.root}/config/s3.yml", :path => "mp3s/:style/:id/:filename"
+	has_attached_file :mp3_part_one, :storage => :s3, :s3_credentials => "#{Rails.root}/config/s3.yml", :path => "mp3s/:style/:id/:filename"
+	has_attached_file :mp3_part_two, :storage => :s3, :s3_credentials => "#{Rails.root}/config/s3.yml", :path => "mp3s/:style/:id/:filename"
+	has_attached_file :mp3_part_three, :storage => :s3, :s3_credentials => "#{Rails.root}/config/s3.yml", :path => "mp3s/:style/:id/:filename"
+  has_attached_file :mp3_unguided, :storage => :s3, :s3_credentials => "#{Rails.root}/config/s3.yml", :path => "mp3s/:style/:id/:filename"
 
 	# paperclip validation
 	validates_attachment_size :mp3_intro, :less_than => 10.megabytes, :message => "must be smaller than 10Mb"
