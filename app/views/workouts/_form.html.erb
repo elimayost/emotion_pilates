@@ -43,7 +43,7 @@
         <small>
           <mp3_part_one_name>
             Currently attached: <%= @workout.mp3_part_one_file_name %>
-            (<%= link_to 'unattach', unattach_part_one_url(:id => @workout.id), :remote => true %>)
+            (<%= link_to 'unattach', unattach_part_one_url(:id => @workout.id), :remote => true, :confirm => 'Are you sure?' %>)
           </mp3_part_one_name>
         </small>
       <% end %>
@@ -56,7 +56,7 @@
         <small>
           <mp3_part_two_name>
             Currently attached: <%= @workout.mp3_part_two_file_name %>
-            (<%= link_to 'unattach', unattach_part_two_url(:id => @workout.id), :remote => true %>)
+            (<%= link_to 'unattach', unattach_part_two_url(:id => @workout.id), :remote => true, :confirm => 'Are you sure?' %>)
           </mp3_part_two_name>
         </small>
       <% end %>
@@ -69,7 +69,7 @@
         <small>
           <mp3_part_three_name>
             Currently attached: <%= @workout.mp3_part_three_file_name %>
-            (<%= link_to 'unattach', unattach_part_three_url(:id => @workout.id), :remote => true %>)
+            (<%= link_to 'unattach', unattach_part_three_url(:id => @workout.id), :remote => true, :confirm => 'Are you sure?' %>)
           </mp3_part_three_name>
         </small>
       <% end %>
@@ -82,7 +82,7 @@
         <small>
           <mp3_unguided_name>
             Currently attached: <%= @workout.mp3_unguided_file_name %>
-            (<%= link_to 'unattach', unattach_unguided_url(:id => @workout.id), :remote => true %>)
+            (<%= link_to 'unattach', unattach_unguided_url(:id => @workout.id), :remote => true, :confirm => 'Are you sure?' %>)
           </mp3_unguided_name>
         </small>
       <% end %>
