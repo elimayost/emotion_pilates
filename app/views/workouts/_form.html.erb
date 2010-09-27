@@ -30,7 +30,7 @@
       <small>
         <mp3_intro_name>
           Currently attached: <%= @workout.mp3_intro_file_name %>
-          (<%= link_to 'unattach', unattach_intro_url(:id => @workout.id), :remote => true %>)
+          (<%= link_to 'unattach', unattach_intro_url(:id => @workout.id), :remote => true, :method => :destroy %>)
         </mp3_intro_name>
       </small>
     <% end %>
