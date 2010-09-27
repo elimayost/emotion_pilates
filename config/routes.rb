@@ -8,6 +8,11 @@ EmotionPilates::Application.routes.draw do |map|
 
   # admin routes
   match 'admin', :to => 'admin#index'
+  match 'workouts/:id/unattach_intro', :to => 'workouts#unattach_intro', :as => :unattach_intro
+  match 'workouts/:id/unattach_part_one', :to => 'workouts#unattach_part_one', :as => :unattach_part_one
+  match 'workouts/:id/unattach_part_two', :to => 'workouts#unattach_part_two', :as => :unattach_part_two
+  match 'workouts/:id/unattach_part_three', :to => 'workouts#unattach_part_three', :as => :unattach_part_three
+  match 'workouts/:id/unattach_unguided', :to => 'workouts#unattach_unguided', :as => :unattach_unguided
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

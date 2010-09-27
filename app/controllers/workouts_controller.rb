@@ -84,5 +84,31 @@ class WorkoutsController < ApplicationController
     end
   end
 
+  # Unattach MP3 attachement
+  def unattach_intro
+    @workout = Workout.find(params[:id])
+    @workout.update_attribute(:mp3_intro, nil)
+  end
+
+  def unattach_part_one
+    @workout = Workout.find(params[:id])
+    @workout.update_attribute(:mp3_part_one, nil)
+  end
+
+  def unattach_part_two
+    @workout = Workout.find(params[:id])
+    @workout.update_attribute(:mp3_part_two, nil)
+  end
+
+  def unattach_part_three
+    @workout = Workout.find(params[:id])
+    @workout.update_attribute(:mp3_part_three, nil)
+  end
+
+  def unattach_unguided
+    @workout = Workout.find(params[:id])
+    @workout.update_attribute(:mp3_unguided, nil)
+  end
+
 end
 

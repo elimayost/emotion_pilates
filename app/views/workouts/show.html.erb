@@ -8,7 +8,7 @@
   <%= @workout.description %>
 </p>
 
-<% if @workout.mp3_intro %>
+<% if @workout.mp3_intro.exists? %>
 <p>
   <b>Intro MP3:</b><br />
   <div id='mp3_intro'></div>
@@ -17,7 +17,7 @@
 <br />
 <% end %>
 
-<% if @workout.mp3_part_one %>
+<% if @workout.mp3_part_one.exists? %>
 <p>
   <b>Part 1 MP3:</b><br />
   <div id='mp3_part_one'></div>
@@ -26,7 +26,7 @@
 <br />
 <% end %>
 
-<% if @workout.mp3_part_two %>
+<% if @workout.mp3_part_two.exists? %>
 <p>
   <b>Part 2 MP3:</b><br />
   <div id='mp3_part_two'></div>
@@ -35,7 +35,7 @@
 <br />
 <% end %>
 
-<% if @workout.mp3_part_three %>
+<% if @workout.mp3_part_three.exists? %>
 <p>
   <b>Part 3 MP3:</b><br />
   <div id='mp3_part_three'></div>
@@ -44,7 +44,7 @@
 <br />
 <% end %>
 
-<% if @workout.mp3_unguided %>
+<% if @workout.mp3_unguided.exists? %>
 <p>
   <b>Unguided MP3:</b><br />
   <div id='mp3_unguided'></div>
@@ -59,52 +59,57 @@
 
 <!MP3 Longtail players >
 
-<% if @workout.mp3_intro %>
+<% if @workout.mp3_intro.exists? %>
   <script type="text/javascript">
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
     so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_intro_file_name}" %>');
+    so.addVariable('volume','50');
     so.write('mp3_intro');
   </script>
 <% end %>
 
-<% if @workout.mp3_part_one %>
+<% if @workout.mp3_part_one.exists? %>
   <script type="text/javascript">
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
     so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_part_one_file_name}" %>');
+    so.addVariable('volume','50');
     so.write('mp3_part_one');
   </script>
 <% end %>
 
-<% if @workout.mp3_part_two %>
+<% if @workout.mp3_part_two.exists? %>
   <script type="text/javascript">
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
     so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_part_two_file_name}" %>');
+    so.addVariable('volume','50');
     so.write('mp3_part_two');
   </script>
 <% end %>
 
-<% if @workout.mp3_part_three %>
+<% if @workout.mp3_part_three.exists? %>
   <script type="text/javascript">
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
     so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_part_three_file_name}" %>');
+    so.addVariable('volume','50');
     so.write('mp3_part_three');
   </script>
 <% end %>
 
-<% if @workout.mp3_unguided %>
+<% if @workout.mp3_unguided.exists? %>
   <script type="text/javascript">
     var so = new SWFObject('../player.swf','player','300','24','9');
     so.addParam('allowfullscreen','false');
     so.addParam('wmode','opaque');
     so.addVariable('file','../uploads/mp3s/<%= "#{@workout.mp3_unguided_file_name}" %>');
+    so.addVariable('volume','50');
     so.write('mp3_unguided');
   </script>
 <% end %>

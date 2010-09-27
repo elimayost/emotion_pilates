@@ -4,6 +4,11 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
+    <th>Intro MP3</th>
+    <th>Part 1 MP3</th>
+    <th>Part 2 MP3</th>
+    <th>Part 3 MP3</th>
+    <th>Unguided MP3</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +18,11 @@
   <tr>
     <td><%= workout.title %></td>
     <td><%= workout.description %></td>
+    <td><%= workout.mp3_intro_file_name %></td>
+    <td><%= workout.mp3_part_one_file_name %></td>
+    <td><%= workout.mp3_part_two_file_name %></td>
+    <td><%= workout.mp3_part_three_file_name %></td>
+    <td><%= workout.mp3_unguided_file_name %></td>
     <td><%= link_to 'Show', workout %></td>
     <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
     <td><%= link_to 'Destroy', workout, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -23,3 +33,4 @@
 <br />
 
 <%= link_to 'New Workout', new_workout_path %>
+

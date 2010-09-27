@@ -19,26 +19,77 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+
+
+  <! Unattach MP3 attachement >
   <div class="field">
     <%= f.label :mp3_intro %><br />
     <%= f.file_field :mp3_intro %>
+    <% if @workout.mp3_intro.exists? %>
+      <br />
+      <small>
+        <mp3_intro_name>
+          Currently attached: <%= @workout.mp3_intro_file_name %>
+          (<%= link_to 'unattach', unattach_intro_url(:id => @workout.id), :remote => true %>)
+        </mp3_intro_name>
+      </small>
+    <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :mp3_part_one %><br />
+      <%= f.file_field :mp3_part_one %>
+      <% if @workout.mp3_part_one.exists? %>
+        <br />
+        <small>
+          <mp3_part_one_name>
+            Currently attached: <%= @workout.mp3_part_one_file_name %>
+            (<%= link_to 'unattach', unattach_part_one_url(:id => @workout.id), :remote => true %>)
+          </mp3_part_one_name>
+        </small>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :mp3_part_two %><br />
+      <%= f.file_field :mp3_part_two %>
+      <% if @workout.mp3_part_two.exists? %>
+        <br />
+        <small>
+          <mp3_part_two_name>
+            Currently attached: <%= @workout.mp3_part_two_file_name %>
+            (<%= link_to 'unattach', unattach_part_two_url(:id => @workout.id), :remote => true %>)
+          </mp3_part_two_name>
+        </small>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :mp3_part_three %><br />
+      <%= f.file_field :mp3_part_three %>
+      <% if @workout.mp3_part_three.exists? %>
+        <br />
+        <small>
+          <mp3_part_three_name>
+            Currently attached: <%= @workout.mp3_part_three_file_name %>
+            (<%= link_to 'unattach', unattach_part_three_url(:id => @workout.id), :remote => true %>)
+          </mp3_part_three_name>
+        </small>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :mp3_unguided %><br />
+      <%= f.file_field :mp3_unguided %>
+      <% if @workout.mp3_unguided.exists? %>
+        <br />
+        <small>
+          <mp3_unguided_name>
+            Currently attached: <%= @workout.mp3_unguided_file_name %>
+            (<%= link_to 'unattach', unattach_unguided_url(:id => @workout.id), :remote => true %>)
+          </mp3_unguided_name>
+        </small>
+      <% end %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :mp3_part_one %><br />
-    <%= f.file_field :mp3_part_one %>
-  </div>
-  <div class="field">
-    <%= f.label :mp3_part_two %><br />
-    <%= f.file_field :mp3_part_two %>
-  </div>
-  <div class="field">
-    <%= f.label :mp3_part_three %><br />
-    <%= f.file_field :mp3_part_three %>
-  </div>
-  <div class="field">
-    <%= f.label :mp3_unguided %><br />
-    <%= f.file_field :mp3_unguided %>
-  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
