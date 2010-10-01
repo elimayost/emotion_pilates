@@ -24,7 +24,7 @@
   <! Unattach MP3 attachement >
   <div class="field">
     <%= f.label :mp3_intro %><br />
-    <%= f.file_field :mp3_intro %>
+    <intro><%= f.file_field :mp3_intro %><small><%= link_to '(cancel)', '#', :class => 'cancel_upload_link' %></small></intro>
     <% if @workout.mp3_intro.exists? %>
       <br />
       <small>
@@ -37,7 +37,7 @@
     </div>
     <div class="field">
       <%= f.label :mp3_part_one %><br />
-      <%= f.file_field :mp3_part_one %>
+      <part_one><%= f.file_field :mp3_part_one %><small><%= link_to '(cancel)', '#', :class => 'cancel_upload_link' %></small></part_one>
       <% if @workout.mp3_part_one.exists? %>
         <br />
         <small>
@@ -50,7 +50,7 @@
     </div>
     <div class="field">
       <%= f.label :mp3_part_two %><br />
-      <%= f.file_field :mp3_part_two %>
+      <part_two><%= f.file_field :mp3_part_two %><small><%= link_to '(cancel)', '#', :class => 'cancel_upload_link' %></small></part_two>
       <% if @workout.mp3_part_two.exists? %>
         <br />
         <small>
@@ -63,7 +63,7 @@
     </div>
     <div class="field">
       <%= f.label :mp3_part_three %><br />
-      <%= f.file_field :mp3_part_three %>
+      <part_three><%= f.file_field :mp3_part_three %><small><%= link_to '(cancel)', '#', :class => 'cancel_upload_link' %></small></part_three>
       <% if @workout.mp3_part_three.exists? %>
         <br />
         <small>
